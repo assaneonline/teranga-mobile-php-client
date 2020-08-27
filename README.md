@@ -28,5 +28,23 @@ $terangaMobileClient = new Client([
     'application_secret' => '<REPLACE_WITH_YOUR_APPLICATION_SECRET>'
 ]);
 
-$searchQuery = $terangaMobileClient->getSearchFieldQuery();
+$question_uid = $terangaMobileClient->getSearchFieldUid();
+$input_query = $terangaMobileClient->getSearchFieldQuery();
+
+$results = [
+    // List of results
+    [
+        "key" => "opt1", // Uniquely identifies this result (not shown to user)
+        "value" => "" // Label to display back to user in the dropdown list
+    ]
+];
+
+$responseData = [
+    'status' => "ok",       // Set to "ok" or "ko" depending on the outcome of the search
+    'message' => "",        // Custom message, ie. use it to notify user if something goes wrong
+    'data' => $results      // Array containing the list of results
+];
+
+// Return the result back to the requesting device
+die(json_encode($responseData));
 ```

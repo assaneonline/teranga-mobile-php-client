@@ -9,12 +9,13 @@ $terangaMobileClient = new Client([
     'application_secret' => '0'
 ]);
 
+$field_uid = $terangaMobileClient->getSearchFieldUid();
 $query = $terangaMobileClient->getSearchFieldQuery();
 
 $results = [
     [
         "key" => "opt1",
-        "value" => "Query was $query"
+        "value" => "Query was $query (UID=$field_uid)"
     ]
 ];
 
