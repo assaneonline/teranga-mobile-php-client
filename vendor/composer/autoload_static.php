@@ -7,9 +7,16 @@ namespace Composer\Autoload;
 class ComposerStaticInit054ee424d37b3f8f1208f2c16dc667d5
 {
     public static $prefixesPsr0 = array (
-        'I' => 
+        'T' => 
         array (
-            'IpdTv' => 
+            'TerangaMobile' => 
+            array (
+                0 => __DIR__ . '/../..' . '/src',
+            ),
+        ),
+        'C' => 
+        array (
+            'Core' => 
             array (
                 0 => __DIR__ . '/../..' . '/src',
             ),

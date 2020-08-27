@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'IpdTv' => array($baseDir . '/src'),
+    'TerangaMobile' => array($baseDir . '/src'),
+    'Core' => array($baseDir . '/src'),
 );
