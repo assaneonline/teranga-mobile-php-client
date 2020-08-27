@@ -28,5 +28,5 @@ $terangaMobileClient = new Client([
     'application_secret' => '<REPLACE_WITH_YOUR_APPLICATION_SECRET>'
 ]);
 
-$searchQuery = $terangaMobileClient->getSearchQuery();
+$searchQuery = $terangaMobileClient->getSearchFieldQuery();
 ```
