@@ -86,7 +86,7 @@ Response format
 ===
 Here is an example output, showing what you can expect from ```getCallbackData``` :
 
-```json
+```php
 [
     "id" => "264", // ID de la saisie
     "organisation_id" => "1", // ID de l"organisation
