@@ -7,6 +7,7 @@ class BaseClient {
 
     protected $config = [];
     protected $errorMessage = "";
+    protected $JSONInput = null;
 
     function __construct($config = []){
         $this->config = array_merge(
@@ -44,6 +45,13 @@ class BaseClient {
             return json_encode($response, true);
 
         return FALSE;
+    }
+    
+    function getJSONInputStream(){
+        if(is_null($this->JSONInput))
+            $this->JSONInput = json_decode(file_get_contents('php://input'), true);
+
+        return $this->JSONInput;
     }
 
     function getErrorMessage(){
