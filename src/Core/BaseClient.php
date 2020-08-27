@@ -47,6 +47,14 @@ class BaseClient {
         return FALSE;
     }
 
+    function get_post(){
+        if($_POST)
+            return $_POST;
+        
+        $input = $this->getJSONInputStream();
+        return $input ?? [];
+    }
+
     function get_post_field($key){
         if(isset($_POST[$key]))
             return $_POST[$key];
