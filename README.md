@@ -31,6 +31,9 @@ $terangaMobileClient = new Client([
 $question_uid = $terangaMobileClient->getSearchFieldUid();
 $input_query = $terangaMobileClient->getSearchFieldQuery();
 
+// TODO :
+// Given the $input_query and the question ID ($question_uid), client application should perform search and send the results back.
+// Below is a template array showing how to format results :
 $results = [
     // List of results
     [
