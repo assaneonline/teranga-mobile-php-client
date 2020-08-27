@@ -7,12 +7,10 @@ class Client extends \Core\BaseClient {
     const API_BASE_PATH = 'http://teranga-mobile.pasteur.sn/api/v1/';
 
     function getSearchFieldUid(){
-        $input = $this->getJSONInputStream();
-        return $input["field_uid"] ?? FALSE;
+        return $this->get_post_field("field_uid");
     }
 
     function getSearchFieldQuery(){
-        $input = $this->getJSONInputStream();
-        return $input["query"] ?? FALSE;
+        return $this->get_post_field("query");
     }
 }
